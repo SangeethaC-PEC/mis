@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function ShowHideDiv2() {
+    var Payment1 = document.getElementById("Payment1");
+    var BCO = document.getElementById("BCO");
+    BCO.style.display = Payment1.value == "A/C" ? "block" : "none";
+    document.getElementById("myId").required = (BCO.style.display == "block");
+      
+}
+ 
+</script>
+</head>
+<body>
+<form>
+<select name="Payment 1" id="Payment1" editable="true" onchange = "ShowHideDiv2()">
+<option value="null" selected>Select... </option>
+<option value="A/C">A/C</option>
+<option value="Guest">Guest</option>
+</select>
+
+  
+<div id="BCO" style="display: none">
+<input name="BCO Approved" type="checkbox" value="Yes" id="myId">
+I will pay by A/C.
+</div>
+  <input type="submit" value="submit">
+  <form>
+ 
+</body>
+</html>
